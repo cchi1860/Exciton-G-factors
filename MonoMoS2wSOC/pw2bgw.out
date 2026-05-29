@@ -1,0 +1,59 @@
+
+     Program PW2BGW v.7.3.1 starts on 25Feb2026 at 15:39: 0 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     6 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       6
+     6238 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./2H.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          66      66     20                 8388     8388    1440
+     Max          67      67     21                 8402     8402    1469
+     Sum         397     397    121                50363    50363    8685
+
+     Using Slab Decomposition
+
+     Reading collected, re-writing distributed wavefunctions
+
+     NLCC is present
+
+     pw2bgw running with full spinors (non-collinear).
+
+     call write_wfng
+     done write_wfng
+
+
+     write_wfng   :      0.51s CPU      3.79s WALL (       1 calls)
+
+     PW2BGW       :      1.29s CPU      8.52s WALL
+
+
+   This run was terminated on:  15:39: 8  25Feb2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
