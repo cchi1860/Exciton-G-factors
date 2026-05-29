@@ -1,0 +1,50 @@
+&CONTROL
+  calculation  = "nscf"
+  prefix       = "2H",
+  pseudo_dir   = "./pseudo",
+  outdir       = ".",
+/
+&SYSTEM
+  ibrav     = 0,
+  A = 3.32
+  nat       = 3,
+  ntyp      = 2,
+  ecutwfc   = 40,
+  noncolin= .true.
+  lspinorb= .true.
+  nbnd = 350
+/
+&ELECTRONS
+  conv_thr    = 1.D-8,
+  mixing_beta = 0.3D,
+  electron_maxstep = 1000
+/
+&IONS
+ ion_dynamics='bfgs',
+/
+&CELL
+ cell_dynamics = 'bfgs'
+ press = 0.0,
+ cell_dofree = '2Dxy'
+/
+CELL_PARAMETERS {alat}
+1.0 0.0 0.000000
+0.5 0.8660254037729868 0.000000
+0.0 0.0 7.575757575757576
+
+ATOMIC_SPECIES
+W 183.84  W.upf
+Se 78.96 Se.upf  
+
+ATOMIC_POSITIONS (crystal)
+W        0.000000000  -0.000000000   0.500000000
+Se       0.666666666   0.666666666   0.567482495
+Se       0.666666666   0.666666666   0.432517505
+
+K_POINTS {tpiba}
+5
+0.6666666666 0.         0. 1.0
+0.6666766666 0.         0. 1.0
+0.6666566666 0.         0. 1.0
+0.6666666666 0.00001         0. 1.0
+0.6666666666 -0.00001         0. 1.0
