@@ -1,0 +1,9 @@
+# SIESTA2BGW.PY INPUT FILE
+fdf_file = './input.fdf'     # SIESTA input fdf
+savedir   = '.' # output file will be saved in {savedir}/Siesta2bgw.save/
+ecut = 40.0                  # ecutwfc in Ry
+lowest_band  = 1            # lowest_band in WFSX file   starting from 1
+highest_band = 110            # highest_band in WFSX file
+ibnd_lst  = list(range(lowest_band, highest_band+1)) # bands to be converted
+ik_lst    = [1, 2, 3, 4, 5]        # starting from 1
+sp_symbol = ['W', 'Se']      # list of ChemicalSpeciesLabel
