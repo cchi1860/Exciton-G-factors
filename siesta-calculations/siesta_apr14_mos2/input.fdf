@@ -1,0 +1,64 @@
+SystemName MoS2                                                                                           
+SystemLabel MoS2
+
+NumberOfAtoms 3
+NumberOfSpecies 2
+
+%block ChemicalSpeciesLabel
+1 42 Mo
+2 16 S
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant 1.0 Ang
+%block LatticeVectors
+3.18000000000000 0.00000000000000 0.00000000000000
+1.59000000000000 2.75396078403452 0.00000000000000
+0.00000000000000 0.00000000000000 25
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Fractional
+%block AtomicCoordinatesAndAtomicSpecies
+0.000000000   0.000000000   0.500000000 1
+0.666666666   0.666666666   0.562615625 2
+0.666666666   0.666666666   0.437384375 2
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+Spin spin-orbit
+%block DM.InitSpin
+%endblock DM.InitSpin
+
+PAO.BasisSize DZP
+
+XC.functional GGA
+XC.authors    PBE
+
+%block kgrid_Monkhorst_Pack
+  15 0 0 0.0
+  0  15 0 0.0
+  0  0 1  0.0
+%endblock Kgrid_Monkhorst_Pack
+
+MeshCutoff         120 Ry
+
+MaxSCFIterations     500
+DM.MixingWeight      0.2
+DM.NumberPulay       5
+DM.Tolerance         1.d-7
+DM.MixSCF1 .true.
+SolutionMethod diagon
+Diag.ParallelOverK true
+DM.UseSaveDM true
+SaveHS true
+WriteEigenvectors true
+SaveEigenvectors ./
+
+WFS.Write.For.Bands T
+
+BandLinesScale ReciprocalLatticeVectors
+%block BandLines
+1 0.66666667 0.33333333 0
+1 0.66667667 0.33333833 0
+1 0.66665667 0.33332833 0
+1 0.66666667 0.33332467 0
+1 0.66666667 0.33334199 0
+%endblock BandLines
